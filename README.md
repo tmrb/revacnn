@@ -1,7 +1,10 @@
-# revacnn
-ReVACNN: Real-Time Visual Analytics for Convolutional Neural Network
+# ReVACNN
+Real-Time Visual Analytics for Convolutional Neural Network
 
 ## Dependencies
+- Tensorflow
+- Keras
+- Flask
 
 ## Start
 **Note**: Running this requires [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which includes [npm](https://npmjs.org)) on your system.
@@ -15,7 +18,7 @@ $ cd revacnn
 $ npm install
 
 # Run flask server
-# python revacnn_server.py
+$ python revacnn_server.py
 # Open http://localhost:5000/ on your browser
 # Press start button to train a cnn model
 ```
