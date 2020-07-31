@@ -1,4 +1,18 @@
+pip install --upgrade tensorflow
+
 from __future__ import print_function
+import numpy as np
+import tensorflow
+from tensorflow import keras
+from keras import callbacks
+from sklearn.manifold import TSNE
+import time
+import json
+import warnings
+import sys
+import monitor_api
+
+
 from keras.datasets import cifar10
 from keras.preprocessing.image import ImageDataGenerator
 from keras.models import Sequential
@@ -6,17 +20,6 @@ from keras.layers import Dense, Dropout, Activation, Flatten
 from keras.layers import Convolution2D, MaxPooling2D
 from keras.optimizers import SGD
 from keras.utils import np_utils
-
-import numpy as np
-import keras
-from keras import callbacks
-from sklearn.manifold import TSNE
-import time
-import json
-import warnings
-import sys
-
-import monitor_api
 
 batch_size = 64
 nb_classes = 10
@@ -32,7 +35,7 @@ img_channels = 3
 initialize = "uniform"
 
 # the data, shuffled and split between train and test sets
-(X_train, y_train), (X_test, y_test) = cifar10.load_data()
+(X_train, y_train), (X_test, y_test) = np.loadtxt(overallstr4backup.csv, delimiter=';')
 print('X_train shape:', X_train.shape)
 print(X_train.shape[0], 'train samples')
 print(X_test.shape[0], 'test samples')
